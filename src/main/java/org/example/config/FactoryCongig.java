@@ -1,5 +1,6 @@
 package org.example.config;
 
+import org.example.entities.Patient;
 import org.example.entities.User;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -14,6 +15,7 @@ public class FactoryCongig {
 
         //Annotated Classes
         configuration.addAnnotatedClass(User.class);
+        configuration.addAnnotatedClass(Patient.class);
 
         sessionFactory = configuration.buildSessionFactory();
     }
