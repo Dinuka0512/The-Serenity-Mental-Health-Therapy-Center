@@ -18,7 +18,7 @@ import java.util.List;
 @Setter
 public class User {
     @Id
-    private String User_Id;
+    private String user_Id;
 
     private String name;
     private String address;

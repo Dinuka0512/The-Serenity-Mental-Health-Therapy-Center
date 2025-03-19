@@ -23,6 +23,9 @@ public class Patient {
     private String contact;
 
     @ManyToOne
-    @JoinColumn(name = "User_Id")
+    @JoinColumn(name = "user_Id")
     private User user;
+
+    @OneToOne(mappedBy = "patient")
+    private Payment payment;
 }
