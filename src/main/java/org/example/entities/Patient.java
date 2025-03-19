@@ -1,10 +1,13 @@
 package org.example.entities;
 
 import jakarta.persistence.*;
+import jdk.dynalink.linker.LinkerServices;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import java.util.List;
 
 @Entity
 @AllArgsConstructor
@@ -28,4 +31,7 @@ public class Patient {
 
     @OneToOne(mappedBy = "patient")
     private Payment payment;
+
+    @ManyToMany(mappedBy = "patients")
+    private List<TherapyProgram> therapyPrograms;
 }
