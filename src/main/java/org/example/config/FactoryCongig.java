@@ -1,6 +1,7 @@
 package org.example.config;
 
 import org.example.entities.*;
+import org.example.entities.Associatentities.sessoins;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -18,6 +19,7 @@ public class FactoryCongig {
         configuration.addAnnotatedClass(Payment.class);
         configuration.addAnnotatedClass(TherapyProgram.class);
         configuration.addAnnotatedClass(Therapist.class);
+        configuration.addAnnotatedClass(sessoins.class);
 
         sessionFactory = configuration.buildSessionFactory();
     }

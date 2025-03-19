@@ -1,13 +1,11 @@
 package org.example.entities;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToMany;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.example.entities.Associatentities.sessoins;
 
 import java.util.List;
 
@@ -29,4 +27,7 @@ public class Therapist {
 
     @ManyToMany
     private List<TherapyProgram> therapyPrograms;
+
+    @OneToMany(mappedBy = "therapist")
+    private List<sessoins> sessions;
 }

@@ -1,7 +1,6 @@
 package org.example.entities;
 
 import jakarta.persistence.*;
-import jdk.dynalink.linker.LinkerServices;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -34,4 +33,7 @@ public class Patient {
 
     @ManyToMany(mappedBy = "patients")
     private List<TherapyProgram> therapyPrograms;
+
+    @OneToMany(mappedBy = "patient")
+    private List<org.example.entities.Associatentities.sessoins> sessoins;
 }
