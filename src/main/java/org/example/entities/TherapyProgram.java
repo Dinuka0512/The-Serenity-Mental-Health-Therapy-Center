@@ -24,4 +24,7 @@ public class TherapyProgram {
 
     @ManyToMany
     private List<Patient> patients;
+
+    @ManyToMany(mappedBy = "therapyPrograms")
+    private List<Therapist> therapists;
 }
